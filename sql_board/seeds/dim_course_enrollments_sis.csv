@@ -1,0 +1,101 @@
+sis_course_enrollment_id,course_name,start_date,drop_date,end_date,course_grade,has_passed_course
+2000,Medical-Surgical Nursing,2023-01-01,2023-01-31,2023-04-01,W,False
+2001,Pharmacology,2023-01-04,,2023-04-04,P,True
+2002,Pharmacology,2023-01-07,,2023-04-07,P,True
+2003,Pharmacology,2023-01-10,,2023-04-10,P,True
+2004,Fundamentals of Nursing,2023-01-13,,2023-04-13,B,True
+2005,Medical-Surgical Nursing,2023-01-16,,2023-04-16,C,True
+2006,Pharmacology,2023-01-19,,2023-04-19,A,True
+2007,Pharmacology,2023-01-22,,2023-04-22,F,False
+2008,Critical Care Nursing,2023-01-25,,2023-04-25,D,False
+2009,Pathophysiology,2023-01-28,,2023-04-28,P,True
+2010,Critical Care Nursing,2023-01-31,2023-03-02,2023-05-01,D,False
+2011,Pharmacology,2023-02-03,,2023-05-04,A,True
+2012,Pathophysiology,2023-02-06,,2023-05-07,P,True
+2013,Medical-Surgical Nursing,2023-02-09,,2023-05-10,P,True
+2014,Psychiatric Nursing,2023-02-12,,2023-05-13,A,True
+2015,Pharmacology,2023-02-15,,2023-05-16,B,True
+2016,Health Assessment,2023-02-18,,2023-05-19,P,True
+2017,Obstetrics and Gynecology,2023-02-21,,2023-05-22,W,False
+2018,Medical-Surgical Nursing,2023-02-24,,2023-05-25,W,False
+2019,Critical Care Nursing,2023-02-27,,2023-05-28,P,True
+2020,Obstetrics and Gynecology,2023-03-02,2023-04-01,2023-05-31,D,False
+2021,Pediatrics Nursing,2023-03-05,,2023-06-03,W,False
+2022,Pediatrics Nursing,2023-03-08,,2023-06-06,F,False
+2023,Pediatrics Nursing,2023-03-11,,2023-06-09,A,True
+2024,Pediatrics Nursing,2023-03-14,,2023-06-12,B,True
+2025,Community Health Nursing,2023-03-17,,2023-06-15,W,False
+2026,Critical Care Nursing,2023-03-20,,2023-06-18,F,False
+2027,Fundamentals of Nursing,2023-03-23,,2023-06-21,C,True
+2028,Critical Care Nursing,2023-03-26,,2023-06-24,P,True
+2029,Psychiatric Nursing,2023-03-29,,2023-06-27,B,True
+2030,Critical Care Nursing,2023-04-01,2023-05-01,2023-06-30,W,False
+2031,Pediatrics Nursing,2023-04-04,,2023-07-03,F,False
+2032,Health Assessment,2023-04-07,,2023-07-06,B,True
+2033,Medical-Surgical Nursing,2023-04-10,,2023-07-09,C,True
+2034,Obstetrics and Gynecology,2023-04-13,,2023-07-12,F,False
+2035,Critical Care Nursing,2023-04-16,,2023-07-15,W,False
+2036,Pathophysiology,2023-04-19,,2023-07-18,B,True
+2037,Obstetrics and Gynecology,2023-04-22,,2023-07-21,A,True
+2038,Pathophysiology,2023-04-25,,2023-07-24,A,True
+2039,Psychiatric Nursing,2023-04-28,,2023-07-27,F,False
+2040,Pediatrics Nursing,2023-05-01,2023-05-31,2023-07-30,W,False
+2041,Community Health Nursing,2023-05-04,,2023-08-02,P,True
+2042,Community Health Nursing,2023-05-07,,2023-08-05,D,False
+2043,Fundamentals of Nursing,2023-05-10,,2023-08-08,F,False
+2044,Health Assessment,2023-05-13,,2023-08-11,A,True
+2045,Critical Care Nursing,2023-05-16,,2023-08-14,P,True
+2046,Pharmacology,2023-05-19,,2023-08-17,D,False
+2047,Fundamentals of Nursing,2023-05-22,,2023-08-20,B,True
+2048,Critical Care Nursing,2023-05-25,,2023-08-23,D,False
+2049,Pharmacology,2023-05-28,,2023-08-26,F,False
+2050,Obstetrics and Gynecology,2023-05-31,2023-06-30,2023-08-29,B,True
+2051,Critical Care Nursing,2023-06-03,,2023-09-01,F,False
+2052,Pathophysiology,2023-06-06,,2023-09-04,D,False
+2053,Medical-Surgical Nursing,2023-06-09,,2023-09-07,W,False
+2054,Medical-Surgical Nursing,2023-06-12,,2023-09-10,W,False
+2055,Obstetrics and Gynecology,2023-06-15,,2023-09-13,D,False
+2056,Pharmacology,2023-06-18,,2023-09-16,D,False
+2057,Critical Care Nursing,2023-06-21,,2023-09-19,W,False
+2058,Fundamentals of Nursing,2023-06-24,,2023-09-22,B,True
+2059,Critical Care Nursing,2023-06-27,,2023-09-25,W,False
+2060,Medical-Surgical Nursing,2023-06-30,2023-07-30,2023-09-28,F,False
+2061,Community Health Nursing,2023-07-03,,2023-10-01,P,True
+2062,Pathophysiology,2023-07-06,,2023-10-04,D,False
+2063,Community Health Nursing,2023-07-09,,2023-10-07,P,True
+2064,Critical Care Nursing,2023-07-12,,2023-10-10,W,False
+2065,Critical Care Nursing,2023-07-15,,2023-10-13,D,False
+2066,Pathophysiology,2023-07-18,,2023-10-16,D,False
+2067,Pharmacology,2023-07-21,,2023-10-19,C,True
+2068,Fundamentals of Nursing,2023-07-24,,2023-10-22,A,True
+2069,Obstetrics and Gynecology,2023-07-27,,2023-10-25,F,False
+2070,Health Assessment,2023-07-30,2023-08-29,2023-10-28,C,True
+2071,Pathophysiology,2023-08-02,,2023-10-31,W,False
+2072,Obstetrics and Gynecology,2023-08-05,,2023-11-03,W,False
+2073,Critical Care Nursing,2023-08-08,,2023-11-06,C,True
+2074,Fundamentals of Nursing,2023-08-11,,2023-11-09,B,True
+2075,Community Health Nursing,2023-08-14,,2023-11-12,A,True
+2076,Medical-Surgical Nursing,2023-08-17,,2023-11-15,P,True
+2077,Obstetrics and Gynecology,2023-08-20,,2023-11-18,B,True
+2078,Medical-Surgical Nursing,2023-08-23,,2023-11-21,W,False
+2079,Obstetrics and Gynecology,2023-08-26,,2023-11-24,B,True
+2080,Health Assessment,2023-08-29,2023-09-28,2023-11-27,P,True
+2081,Fundamentals of Nursing,2023-09-01,,2023-11-30,B,True
+2082,Psychiatric Nursing,2023-09-04,,2023-12-03,A,True
+2083,Obstetrics and Gynecology,2023-09-07,,2023-12-06,B,True
+2084,Psychiatric Nursing,2023-09-10,,2023-12-09,F,False
+2085,Pharmacology,2023-09-13,,2023-12-12,D,False
+2086,Community Health Nursing,2023-09-16,,2023-12-15,P,True
+2087,Community Health Nursing,2023-09-19,,2023-12-18,C,True
+2088,Pathophysiology,2023-09-22,,2023-12-21,F,False
+2089,Pharmacology,2023-09-25,,2023-12-24,A,True
+2090,Fundamentals of Nursing,2023-09-28,2023-10-28,2023-12-27,F,False
+2091,Community Health Nursing,2023-10-01,,2023-12-30,F,False
+2092,Fundamentals of Nursing,2023-10-04,,2024-01-02,F,False
+2093,Medical-Surgical Nursing,2023-10-07,,2024-01-05,C,True
+2094,Pathophysiology,2023-10-10,,2024-01-08,C,True
+2095,Pharmacology,2023-10-13,,2024-01-11,W,False
+2096,Psychiatric Nursing,2023-10-16,,2024-01-14,W,False
+2097,Obstetrics and Gynecology,2023-10-19,,2024-01-17,C,True
+2098,Community Health Nursing,2023-10-22,,2024-01-20,P,True
+2099,Medical-Surgical Nursing,2023-10-25,,2024-01-23,D,False
