@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: base_courses
+    description: "Base model for course-level fact data, sourced from fact_courses. 
+      This model provides a mapping between SIS and LMS course IDs along with the total number of 
+      learners enrolled in each course."
+    columns:
+      - name: sis_course_id 
+        description: "Unique identifier for the course in the SIS (Student Information System). 
+          This ID corresponds to the institutional course record."
+      - name: lms_course_id
+        description: "Unique identifier for the course in the LMS (Learning Management System). 
+          This ID represents the course as it appears in the online learning platform."
+      - name: learner_count
+        description: "Total number of learners enrolled in the course. 
+          This is an aggregated metric representing the number of unique students associated with this course."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: fact_courses

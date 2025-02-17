@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: base_dates
+    description: "Base model for the date dimension, providing structured time-based 
+      attributes to support analysis and reporting. This model includes granular date breakdowns such as week, month, quarter, and semester."
+    columns:
+      - name: day
+        description: "Numeric value representing the day of the month (1-31)."
+      - name: week
+        description: "Numeric value representing the week of the year. This helps with weekly aggregations and trend analysis."
+      - name: month
+        description: "Numeric value representing the month (1-12). Useful for grouping data by month."
+      - name: quarter
+        description: "Numeric value representing the quarter (1-4), where Q1 = Jan-Mar, Q2 = Apr-Jun, etc."
+      - name: semester
+        description: "Numeric value representing the academic semester (1-2), where Semester 1 
+          typically covers Jan-Jun and Semester 2 covers Jul-Dec."
+      - name: year
+        description: "Four-digit representation of the year (e.g., 2023)."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_data

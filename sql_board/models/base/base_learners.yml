@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: base_learners
+    description: "Base model for learner fact data, linking SIS and LMS records. 
+      This model provides a unified view of learners across both systems and identifies those who are HESI test takers."
+    columns:
+      - name: sis_learner_id
+        description: "Unique identifier for the learner in the SIS system."
+      - name: lms_learner_id
+        description: "Unique identifier for the learner in the LMS system."
+      - name: is_hesi_testtaker
+        description: "Boolean flag indicating whether the learner is a HESI test taker (true) or not (false)."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: fact_learner

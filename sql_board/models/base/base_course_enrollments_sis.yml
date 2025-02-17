@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: base_course_enrollments_sis
+    description: "Base model for course enrollment data from the SIS (Student Information System). 
+      This model provides detailed enrollment records, including course details, enrollment dates, grades, and completion status."
+    columns:
+      - name: sis_course_enrollment_id
+        description: "Unique identifier for a course enrollment record in the SIS. 
+          This links a learner to a specific course within the SIS."
+      - name: course_name
+        description: "Name of the course as recorded in the SIS."
+      - name: start_date
+        description: "Date when the learner officially started the course."
+      - name: drop_date
+        description: "Date when the learner dropped the course, if applicable. Null if the learner did not drop."
+      - name: end_date
+        description: "The scheduled or actual end date of the course."
+      - name: course_grade
+        description: "Final grade assigned to the learner for this course."
+      - name: has_passed_course
+        description: "Boolean flag indicating whether the learner successfully passed the course based 
+          on institutional grading criteria."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_course_enrollments_sis

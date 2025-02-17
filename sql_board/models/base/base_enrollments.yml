@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: base_enrollments
+    description: "Base model for learner enrollments, sourced from the SIS. 
+      This model tracks learner participation in academic programs, including key enrollment milestones 
+      such as start, drop, withdrawal, and graduation dates."
+    columns:
+      - name: enrollment_id
+        description: "Unique identifier for an enrollment record. 
+          This represents a specific learner's participation in an academic program."
+      - name: learner_id
+        description: "Foreign key linking to the learner's SIS record in dim_learner_sis."
+      - name: program_id
+        description: "Identifier for the academic program the learner is enrolled in (e.g., different nursing programs)."
+      - name: start_date
+        description: "Date when the learner officially started the academic program."
+      - name: drop_date
+        description: "Date when the learner dropped from the program, if applicable. Null if the learner did not drop."
+      - name: withdrawal_date
+        description: "Date when the learner formally withdrew from the program. Null if the learner did not withdraw."
+      - name: graduation_date
+        description: "Date when the learner successfully completed the program. Null if the learner has not yet graduated."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_enrollments

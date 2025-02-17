@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: base_course_grades
+    description: "Base model for course grades data, sourced from the SIS and LMS. 
+      This model provides detailed grade records for learners, including grade type, status, and whether the grade is passing."
+    columns:
+      - name: course_grade_id
+        description: "Unique identifier for a course grade record. 
+          Each record represents an individual grade assigned to a learner for a specific course component."
+      - name: lms_course_enrollment_id
+        description: "Foreign key linking to the LMS course enrollment record. 
+          This represents the specific instance of a learner taking a course."
+      - name: course_grade_type
+        description: "Type of grade assigned, such as 'Exam,' 'Quiz,' 'Assignment,' 'Project,' or 'Final Exam.'"
+      - name: status
+        description: "Current status of the grade, indicating whether it is 'Completed,' 'In Progress,' 'Not Attempted,' or 'Failed.'"
+      - name: course_grade_name
+        description: "Descriptive name of the grade, such as 'Midterm,' 'Final,' 'Weekly Quiz,' or 'Lab Assignment.'"
+      - name: grade
+        description: "Numerical or letter grade assigned for the course component. This can be a percentage, GPA value, or letter grade."
+      - name: is_passing_grade
+        description: "Boolean flag indicating whether the learner's grade meets the passing criteria for the course."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_course_grades

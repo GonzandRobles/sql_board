@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: base_course_lms
+    description: "Base model for course enrollments within the LMS (Learning Management System). 
+      This model provides detailed course performance metrics, including grades, test scores, and completion time for assignments."
+    columns:
+      - name: lms_course_enrollment_id
+        description: "Unique identifier for a course enrollment record in the LMS. 
+          This represents a specific learner's participation in a course."
+      - name: sis_course_enrollment_id
+        description: "Foreign key linking to the SIS course enrollment record, allowing comparison 
+          between SIS and LMS enrollment data."
+      - name: lms_learner_id
+        description: "Unique identifier for the learner in the LMS system."
+      - name: most_recent_grade
+        description: "The most recent grade recorded for the learner in this course, typically reflecting their current standing."
+      - name: avg_test_score
+        description: "The learner's average test score across all exams within this course."
+      - name: avg_quiz_score
+        description: "The learner's average quiz score throughout the duration of the course."
+      - name: avg_assignment_time_to_complete
+        description: "The average time (in hours) taken by the learner to complete assignments for this course."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_course_lms

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: base_learner_lms
+    description: "Base model for learners in the Learning Management System (LMS). 
+      This model provides details about learners' activity in the LMS, including their names, 
+      creation timestamps, and last activity dates."
+    columns:
+      - name: lms_learner_id
+        description: "Unique identifier for the learner in the LMS system."
+      - name: learner_name
+        description: "Full name of the learner as recorded in the LMS."
+      - name: last_date_of_activity
+        description: "The most recent date on which the learner was active in the LMS."
+      - name: created_at
+        description: "Timestamp indicating when the learner account was created in the LMS."
+      - name: updated_at
+        description: "Timestamp indicating the last update to the learner's LMS record."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_learner_lms

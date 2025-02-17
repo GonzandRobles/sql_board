@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: base_learner_sis
+    description: "Base model for learners in the Student Information System (SIS). 
+      This model contains key learner details, including application and attendance records."
+    columns:
+      - name: sis_learner_id
+        description: "Unique identifier for the learner in the SIS system."
+      - name: learner_name
+        description: "Full name of the learner as recorded in the SIS."
+      - name: application_date
+        description: "The date when the learner submitted their application to the institution."
+      - name: last_date_of_attendance
+        description: "The last recorded date of attendance for the learner."
+      - name: created_at
+        description: "Timestamp indicating when the learner record was first created in the SIS."
+      - name: updated_at
+        description: "Timestamp indicating the last update to the learner's SIS record."
+
+sources:
+  - name: raw_data
+    database: SQL_BOARD
+    schema: DEV
+    tables:
+      - name: dim_learner_sis
