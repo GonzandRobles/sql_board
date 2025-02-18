@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_course_lms
+    description: "Staging model for LMS course enrollments, 
+        capturing learner performance metrics such as grades, test scores, and completion times."
+    columns:
+      - name: lms_course_enrollment_id
+        description: "Unique identifier for a course enrollment record in the LMS."
+        tests:
+          - unique
+          - not_null
+      - name: sis_course_enrollment_id
+        description: "Foreign key linking to the SIS course enrollment record."
+        tests:
+          - not_null
+      - name: lms_learner_id
+        description: "Unique identifier for the learner in the LMS system."
+        tests:
+          - not_null
+      - name: most_recent_grade
+        description: "The most recent grade recorded for the learner in this course."
+      - name: avg_test_score
+        description: "The learner's average test score across all exams within this course."
+      - name: avg_quiz_score
+        description: "The learner's average quiz score throughout the duration of the course."
+      - name: avg_assignment_time_to_complete
+        description: "The average time (in hours) taken by the learner to complete assignments for this course."

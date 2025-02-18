@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_enrollments
+    description: "Staging model for enrollments, providing structured learner enrollment 
+      data including program participation and key milestones."
+    columns:
+      - name: enrollment_id
+        description: "Unique identifier for an enrollment record, representing a learner's participation in an academic program."
+        tests:
+          - unique
+          - not_null
+      - name: learner_id
+        description: "Foreign key linking to the learner's SIS record in dim_learner_sis."
+        tests:
+          - not_null
+      - name: program_id
+        description: "Identifier for the academic program the learner is enrolled in (e.g., different nursing programs)."
+        tests:
+          - not_null
+      - name: start_date
+        description: "Date when the learner officially started the academic program."
+        tests:
+          - not_null
+      - name: drop_date
+        description: "Date when the learner dropped from the program, if applicable. Null if the learner did not drop."
+      - name: withdrawal_date
+        description: "Date when the learner formally withdrew from the program. Null if the learner did not withdraw."
+      - name: graduation_date
+        description: "Date when the learner successfully completed the program. Null if the learner has not yet graduated."
+

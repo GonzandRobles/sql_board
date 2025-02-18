@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_learner_sis
+    description: "Staging model for learner data from the SIS (Student Information System). 
+      This model cleans and standardizes learner attributes for downstream transformations."
+    columns:
+      - name: sis_learner_id
+        description: "Unique identifier for the learner in the SIS system."
+        tests:
+          - unique
+          - not_null
+      - name: learner_name
+        description: "Full name of the learner as recorded in the SIS."
+        tests:
+          - not_null
+      - name: application_date
+        description: "Date when the learner submitted their application."
+        tests:
+          - not_null
+      - name: last_date_of_attendance
+        description: "Last recorded date of attendance for the learner."
+      - name: created_at
+        description: "Timestamp indicating when the learner record was created."
+        tests:
+          - not_null
+      - name: updated_at
+        description: "Timestamp indicating the last update to the learner record."
+        tests:
+          - not_null

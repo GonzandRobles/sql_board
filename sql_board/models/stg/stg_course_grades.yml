@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_course_grades
+    description: "Staging model for course grades, capturing grading details including type, 
+        name, score, and passing status."
+    columns:
+      - name: course_grade_id
+        description: "Unique identifier for a course grade record."
+        tests:
+          - unique
+          - not_null
+      - name: lms_course_enrollment_id
+        description: "Foreign key linking to the LMS course enrollment record."
+        tests:
+          - not_null
+      - name: course_grade_type
+        description: "Type of grade assigned, such as 'Exam,' 'Quiz,' 'Assignment,' 'Project,' or 'Final Exam.'"
+        tests:
+          - not_null
+      - name: course_grade_name
+        description: "Descriptive name of the grade, such as 'Midterm,' 'Final,' 'Weekly Quiz,' or 'Lab Assignment.'"
+        tests:
+          - not_null
+      - name: grade
+        description: "Numerical or letter grade assigned for the course component."
+        tests:
+          - not_null
+      - name: is_passing_grade
+        description: "Boolean flag indicating whether the learner's grade meets the passing criteria."
+        tests:
+          - not_null

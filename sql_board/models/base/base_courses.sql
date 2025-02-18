@@ -4,7 +4,7 @@ with
 
     raw_learners as (
 
-       select * from {{ source('raw_data', 'fact_learner') }}
+       select * from {{ source('raw_data', 'fact_courses') }}
 
     )
 

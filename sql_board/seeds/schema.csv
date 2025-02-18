@@ -1,0 +1,52 @@
+table_name,column_name,data_type,is_primary_key,description
+dim_date,day,date,false,Day value
+dim_date,week,integer,false,Week number
+dim_date,month,integer,false,Month number
+dim_date,quarter,integer,false,Quarter (1-4)
+dim_date,semester,integer,false,Semester (1-2)
+dim_date,year,integer,false,Year value
+dim_learner_sis,sis_learner_id,string,true,Primary key for SIS learner
+dim_learner_sis,learner_name,string,false,Name of the learner
+dim_learner_sis,application_date,date,false,Date of application
+dim_learner_sis,last_date_of_attendance,date,false,Last recorded attendance date
+dim_learner_sis,created_at,timestamp,false,Record creation timestamp
+dim_learner_sis,updated_at,timestamp,false,Record update timestamp
+dim_enrollments,enrollment_id,string,true,Primary key for enrollment
+dim_enrollments,learner_id,string,false,Foreign key to learner
+dim_enrollments,program_id,string,false,Foreign key to program
+dim_enrollments,start_date,date,false,Enrollment start date
+dim_enrollments,drop_date,date,false,Date when enrollment was dropped (if applicable)
+dim_enrollments,withdrawal_date,date,false,Date when learner withdrew (if applicable)
+dim_enrollments,graduation_date,date,false,Date when learner graduated (if applicable)
+dim_course_enrollments_sis,sis_course_enrollment_id,string,true,Primary key for SIS course enrollment
+dim_course_enrollments_sis,course_name,string,false,Name of the course
+dim_course_enrollments_sis,start_date,date,false,Course start date
+dim_course_enrollments_sis,drop_date,date,false,Date when course was dropped (if applicable)
+dim_course_enrollments_sis,end_date,date,false,Course end date
+dim_course_enrollments_sis,course_grade,string,false,Grade received for the course
+dim_course_enrollments_sis,has_passed_course,boolean,false,Indicator if learner passed the course
+fact_learner,sis_learner_id,string,true,Primary key and foreign key to dim_learner_sis
+fact_learner,lms_learner_id,string,false,Foreign key to dim_learner_lms
+fact_learner,is_hesi_testtaker,boolean,false,Indicates if learner took HESI test
+dim_learner_lms,lms_learner_id,string,true,Primary key for LMS learner
+dim_learner_lms,learner_name,string,false,Name of the learner in LMS
+dim_learner_lms,last_date_of_activity,date,false,Last recorded activity date in LMS
+dim_learner_lms,created_at,timestamp,false,Record creation timestamp
+dim_learner_lms,updated_at,timestamp,false,Record update timestamp
+dim_course_grades,course_grade_id,string,true,Primary key for course grade
+dim_course_grades,lms_course_enrollment_id,string,false,Foreign key to LMS course enrollment
+dim_course_grades,course_grade_type,string,false,Type of grade (e.g., final, midterm)
+dim_course_grades,status,string,false,Current status of the grade
+dim_course_grades,course_grade_name,string,false,Name of the grade component
+dim_course_grades,grade,string,false,The actual grade value
+dim_course_grades,is_passing_grade,boolean,false,Indicator if grade is passing
+dim_course_lms,lms_course_enrollment_id,string,true,Primary key for LMS course enrollment
+dim_course_lms,sis_course_enrollment_id,string,false,Foreign key to SIS course enrollment
+dim_course_lms,lms_learner_id,string,false,Foreign key to LMS learner
+dim_course_lms,most_recent_grade,string,false,Most recent grade in the course
+dim_course_lms,avg_test_score,float,false,Average test score in the course
+dim_course_lms,avg_quiz_score,float,false,Average quiz score in the course
+dim_course_lms,avg_assignment_time_to_complete,float,false,Average time to complete assignments
+fact_courses,sis_course_id,string,true,Primary key for course fact
+fact_courses,lms_course_id,string,false,Foreign key to LMS course
+fact_courses,learner_count,integer,false,Count of learners in the course
