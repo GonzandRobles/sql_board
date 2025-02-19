@@ -1,5 +1,7 @@
 with
 
+-- import ctes
+
     fact_learners as (
 
         select * from {{ ref('base_learners') }}
@@ -19,10 +21,11 @@ with
     )
 
 
-SELECT 
+select 
     fl.*,
     ls.learner_name as sis_name,
-    ll.learner_name as lms_name
-FROM fact_learners as fl
-LEFT JOIN sis_learners as ls ON fl.sis_learner_id = ls.sis_learner_id
-LEFT JOIN lms_learners ll ON fl.lms_learner_id = ll.lms_learner_id
+    ll.learner_name as lms_name,
+    ll.last_date_of_activity
+from fact_learners as fl
+left join sis_learners as ls on fl.sis_learner_id = ls.sis_learner_id
+left join lms_learners ll on fl.lms_learner_id = ll.lms_learner_id
