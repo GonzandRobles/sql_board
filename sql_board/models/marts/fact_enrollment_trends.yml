@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: fact_enrollment_trends
+    description: "Fact table tracking enrollment trends, including dropout rates, 
+      withdrawal patterns, and graduation rates over time."
+    columns:
+      - name: program_id
+        description: "The academic program in which the learner is enrolled."
+        tests:
+          - not_null
+      - name: start_year
+        description: "The year in which the learner started the program."
+      - name: drop_year
+        description: "The year in which the learner dropped the program, if applicable."
+      - name: withdrawal_year
+        description: "The year in which the learner withdrew from the program, if applicable."
+      - name: graduation_year
+        description: "The year in which the learner successfully completed the program, if applicable."
+      - name: total_enrollments
+        description: "Total number of learners enrolled in the program."
+        tests:
+          - not_null
+      - name: total_drops
+        description: "Total number of learners who dropped out of the program."
+      - name: total_withdrawals
+        description: "Total number of learners who withdrew from the program."
+      - name: total_graduates
+        description: "Total number of learners who successfully graduated from the program."
+      - name: graduation_rate
+        description: "Percentage of learners who successfully graduated."
+      - name: dropout_rate
+        description: "Percentage of learners who dropped out of the program."

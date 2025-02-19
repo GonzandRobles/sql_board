@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: fact_learner_progress
+    description: "Fact table tracking learner progress, linking SIS and LMS 
+        data to provide insights into course completion, enrollment trends, and academic performance."
+    columns:
+      - name: sis_learner_id
+        description: "Unique identifier for the learner in the SIS."
+        tests:
+          - unique
+          - not_null
+      - name: lms_learner_id
+        description: "Unique identifier for the learner in the LMS."
+        tests:
+          - not_null
+      - name: sis_name
+        description: "Full name of the learner from the SIS."
+      - name: lms_name
+        description: "Full name of the learner from the LMS."
+      - name: last_date_of_activity
+        description: "Last recorded date of activity in the LMS."
+      - name: is_hesi_testtaker
+        description: "Boolean flag indicating if the learner is a HESI test taker."
+      - name: program_id
+        description: "The academic program the learner is enrolled in."
+        tests:
+          - not_null
+      - name: start_date
+        description: "Date when the learner started their program."
+        tests:
+          - not_null
+      - name: drop_date
+        description: "Date when the learner dropped the program, if applicable."
+      - name: withdrawal_date
+        description: "Date when the learner formally withdrew from the program."
+      - name: graduation_date
+        description: "Date when the learner successfully completed the program."
+      - name: total_courses_enrolled
+        description: "Total number of courses the learner has enrolled in."
+        tests:
+          - not_null
+      - name: total_courses_passed
+        description: "Total number of courses successfully passed by the learner."
+      - name: avg_test_score
+        description: "Average test score for the learner across all courses."
+      - name: avg_quiz_score
+        description: "Average quiz score for the learner across all courses."
+      - name: avg_assignment_time
+        description: "Average time taken to complete assignments across all courses."

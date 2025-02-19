@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fact_course_performance
+    description: "Fact table aggregating course-level performance metrics, 
+        including enrollment trends, pass/fail rates, and grading statistics."
+    columns:
+      - name: sis_course_id
+        description: "Unique identifier for the course in the SIS."
+        tests:
+          - unique
+          - not_null
+      - name: lms_course_id
+        description: "Unique identifier for the course in the LMS."
+        tests:
+          - not_null
+      - name: course_name
+        description: "Name of the course."
+      - name: start_date
+        description: "Start date of the course."
+      - name: end_date
+        description: "End date of the course."
+      - name: drop_date
+        description: "Date when the course was dropped, if applicable."
+      - name: total_enrollments
+        description: "Total number of learners enrolled in the course."
+        tests:
+          - not_null
+      - name: total_passes
+        description: "Total number of learners who passed the course."
+      - name: total_failures
+        description: "Total number of learners who failed the course."
+      - name: avg_test_score
+        description: "Average test score for the course."
+      - name: avg_quiz_score
+        description: "Average quiz score for the course."
+      - name: avg_assignment_time
+        description: "Average time taken to complete assignments in the course."
+      - name: avg_final_grade
+        description: "Average final grade across all learners in the course."
